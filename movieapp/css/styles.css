@@ -1,0 +1,458 @@
+        *
+        {
+            box-sizing: border-box;
+        }
+        html
+        {
+            scroll-behavior: smooth;
+            /* sağ alttaki yukarı gitme tuşuna bastığımızda direkt değil kaydırarak gider */
+        }
+        .main-header
+        {
+            background-color: #FC997C;
+            padding: 10px;
+            position: fixed;
+            z-index: 1;
+            width: 100%;
+            top: 0;
+            
+        }
+
+        a
+        {
+            text-decoration: none;
+        }
+
+        body
+        {
+            margin: 0%;
+            font-family: 'Lato', sans-serif;
+        }
+        main
+        {
+            margin-top: 50px;
+        }
+
+        .main-nav
+        {
+            display: inline-block;
+            text-align: right;
+            width: calc(100% - 101px);
+        }
+
+        .main-nav__item
+        {
+            display: inline-block;
+            margin: 0px 10px;
+        }
+        .main-nav__items
+        {
+            margin: 0%;
+            padding: 0;
+            list-style: none;
+
+        }
+        #showcase
+        {
+            background-image:
+            linear-gradient(to bottom, rgba(252, 153, 124, 0.2),rgba(250, 81, 30, 0.2) ),
+            url('../img/rap.jpeg') ;
+            background-position: center;
+            background-size:cover ;
+            background-attachment: fixed;
+            height: 80vh;
+            width: 100%;
+            /* background-position: center; yaparsak resmin ortasını gösterir
+            center yerine top dersek üst bottom dersek alt kısmı gösterilir
+            bottom right dersek alt kısmın sağı gibi özellikler ekleyebiliriz 
+            (top center bottom right left)
+            sayfayı küçülttüğümüzde ekran top left i gösterme eğiliminde olur*/
+            position: relative;
+            /* Welcome To Movieapp h1 etiketi showcase i temel alması için position:relative yapıyoruz daha sonra h1 etiketine verdiğimiz değerlerle 
+            yazıyı resmin tam ortasına konumlandırıyoruz */
+        }
+        #showcase .content
+        {
+            
+            color: #fff;
+            font-size: 30px;
+            background: rgba(46,76,109,0.3);
+            padding: 20px;
+            width: 60%;
+            border-radius: 20px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        #showcase h1
+        {
+            position: absolute;
+            top: 50%;
+            margin: 0;
+            color: #fff;
+            font-size: 45px;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            /* normalde konumlandırma Welcome To Movieapp yazısının sol üst köşesine göre yapılır ve üstten alttan 50% değerler versekte resmin tam ortasına gelmez ama transform: translate(-50%, -50%); yaparsak Welcome To Movieapp yazısının tam orta noktasına göre yapılır ve resmin tam ortasına gelir */
+        }
+
+        
+
+        .main-header__logo
+        {
+            color: #fff;
+            font-weight: bold;
+            font-size: 21px;
+        }
+
+        .main-nav__item a 
+        {
+            color: #fff;
+        }
+        .main-nav__item a:hover
+        {
+            color: #2E4C6D;
+        }
+
+        .main-nav__item:hover::before
+        {
+            color: #2E4C6D;
+        }
+
+
+        /*
+        .main-nav__item a:hover, .main-nav__item:hover::before
+        {
+            color: #2E4C6D
+        }  
+        iki selector ında özelliği aynı olduğu için virgüllü bir şekilde yan yana yazabiliriz
+        bu şekilde fazladan satır yazmaktan kurtuluruz 
+        */
+
+        .main-nav__item:active::before
+        {
+            color: #fff;
+        }
+
+        .main-nav__item a:active
+        {
+            color: #fff;
+        }
+        
+        .main-nav__item::before
+        {
+            content: '\2022';
+            color: #fff;
+        }
+        
+        .main-nav__item__login::before
+        {
+            content: none;
+        }
+
+        .row
+        {
+            margin-bottom: 40px;
+        }
+        .row::after
+        {
+            content: "";
+            display: block;
+            clear: both;        
+        }
+        .col-4
+        {
+            float: left;
+            width: 25%;
+        }
+        .col-3
+        {
+            float: left;
+            width: 33.3%;
+        }
+        .col-2
+        {
+            float: left;
+            width: 50%;
+        }
+        #how-it-works
+        {
+           
+            width: 100%;
+            margin: 0;
+            padding: 10px;
+            text-align: center;
+        }
+        #how-it-works h2
+        {
+            color: #3e4555;
+            font-size: 30px;
+            font-weight: 600;
+        }
+        .icon-box h3
+        {
+            color: #3e4555;
+            font-size: 26px;
+        }
+
+        .icon-box i 
+        {
+            color: red;
+            font-size: 30px;
+        }
+        .features__left
+        {
+          background-image:
+            linear-gradient(to bottom, rgba(252, 153, 124, 0.2),rgba(250, 81, 30, 0.2) ),
+            url("../img/old.jpeg") ; 
+          background-size: cover;
+          /* backgroun-size: cover yaparsak fotğrafı boytuna göre sığdırır */
+          background-position: top center;
+          /* background-position: top center; yaparsak foroğrafın üst ve ortasını gösterir */
+        }
+        .features__right
+        {
+            background-color: #edf5f7;
+            padding: 40px;
+        }
+        .features__left,
+        .features__right
+        {
+            height: 350px;
+        }
+        .features__right h3 
+        {
+            font-size: 30px;
+        }
+       
+        .section-title
+        {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #3e4555;
+            font-size: 30px;
+        }
+        .plan
+        {
+            
+            text-align: center;
+            padding: 5px;
+            /* margin: 8px; inner-plan eklediğimiz içim margin e gerek kalmadı*/
+        }
+        .plan__badge
+        {
+            background: #fff;
+            color: #FC997C;
+            padding: 8px;
+            border-radius:15px ;
+
+        }
+        .recommended_plan
+        {
+            color: #fff;
+            background-color:#396EB0!important ; /*normalde diğer style özellikler
+            inden dolayı #edf5f5 rengi baskındır ama #396EB0!important yaparsak bu renk baskın olur*/
+        }                
+        .inner-plan
+        {
+            background-color: #edf5f7;
+            padding: 25px 10px;
+            border-radius: 15px;
+            /*box-shadow: 5px 10px 25px 5px;
+             5px 10px yatay dikey gölgeyi ayarlarken 25px gölgenin yoğunluğunu ayarlar */
+             /*google =  https://www.w3schools.com/cssref/css3_pr_box-shadow.asp
+             https://getcssscan.com/css-box-shadow-examples */
+             box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+             /* ilgili süre içerisinde(.6s) gölgenin gelişini ayarlıyoruz */
+             border: 1px solid red;
+        }
+        .inner-plan:hover
+        {
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;   
+            margin: -40px;
+            transition-duration: 1s;
+            transform: translateY(30px);
+        }
+        .plan__features
+        {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        .plan__featured
+        {
+            position: relative;
+            top: -20px;
+        }
+        .plan__features li
+        {
+          margin: 6px 0px;  
+        }
+        .clearfix::after
+        {
+            content: "";
+            display: block;
+            clear: both;
+
+        }
+        .container
+        {
+             margin: 0px auto; /*üst ve alt 0 olsun, sağ sol boşluklara göre eşit ayarla*/
+             width: 1000px;
+        }
+
+        #backtotop
+        {
+           position: fixed;
+           bottom: 10px;
+           right: 10px; 
+        }
+        /* sağa alttaki icon */
+        #backtotop i
+        {
+            color: #2E4C6D;
+            font-size: 45px;
+            transition: color .6s;
+        }
+        #backtotop i:hover
+        {
+            color: #002042;
+            font-size: 45px;
+        }
+
+        .counter
+        {
+            background: linear-gradient(to bottom, #fc997c 0%, #fc8b69 100% );
+            text-align: center;
+            padding: 50px;
+        }
+        .counter__item
+        {
+            font-size: 30px;
+            font-weight: 500;
+            color: #fff;
+            background-color: #436181;
+            padding: 0px 20px 20px 20px ;
+            border-radius: 15px;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px; 
+        }
+        .counter__item:hover
+        {
+            font-size: 60px;
+            transition-duration: .6s;
+
+        }
+
+        .counter h4 
+        {
+            margin: 0;
+            color: #fff;
+        }
+        .card-container
+        {
+            padding: 10px;
+            
+        }
+        .card
+        {   
+            background-color: #fff;
+            border-radius: 15px;
+            cursor: pointer;
+            box-shadow: 10px 10px 40px rgba(52, 58, 64, 0.1);
+            position: relative;
+            top: 0;
+            transition: all .3s;
+            border: 1px solid red;
+        }
+        .card:hover
+        {
+           /* top: -20px;  */
+           transform: translateY(-20px);
+           margin: -10px;
+           transition-duration: 1s;
+        }       
+        /*.card-image
+        {
+             max-height: 350px; 
+        }*/
+
+        .card-body
+        {
+            padding: 30px;
+        }
+        .img-fluid
+        {
+            width: 100%;
+            border-radius: 15px;
+        }
+        footer
+        {
+            background-color: #2E4C6D;
+            padding: 30px;
+            margin-top: 30px;
+        }
+        footer a 
+        {
+            color: #fff;
+            font-size: 16px;
+            text-decoration: none;   
+            margin-left: 10px;     
+        }
+        footer ul
+        {
+            margin: 0;
+            padding: 0;
+        }
+        footer ul li 
+        {
+            list-style-type: none;
+            display: inline-block;
+            margin-right: 30px;
+        }
+        
+        .social-links
+        {
+            text-align: right;
+        }
+        .fab
+        {
+            padding: 10px;
+            font-size: 25px;
+            border-radius: 50px;
+
+        }
+        .fab:hover
+        {
+            font-size: 50px;
+            transition-duration: 1s;
+        }
+        .fa-facebook
+        {
+            background-color: #87bbe4;
+            color: #fff;
+        }
+        .fa-facebook:hover
+        {
+            background-color: #2498f1;           
+        }
+        .fa-twitter
+        {
+            background-color: #546ca0;
+            color: #fff
+        }
+        .fa-twitter:hover
+        {
+            background-color: #08379c;
+        }
+        .fa-instagram
+        {
+            background-color: #bd4141;
+            color: #fff;
+        }
+        .fa-instagram:hover
+        {
+            background-color: #9c0000;
+
+        }
+
